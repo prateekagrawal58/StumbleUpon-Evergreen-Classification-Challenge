@@ -76,7 +76,7 @@ df_test.drop('alchemy_category', axis=1)
 
 """###Here, boilerplate is giving more information than url, so we are going to convert it into word embedding."""
 
-#Cleaning the test dataframe 
+#Cleaning the train dataframe 
 df_train['boilerplate'].replace(to_replace=r'"title":', value="",inplace=True,regex=True)
 df_train['boilerplate'].replace(to_replace=r'"url":',value="",inplace=True,regex=True)
 df_train['boilerplate'].replace(to_replace=r'"body":',value="",inplace=True,regex=True)
