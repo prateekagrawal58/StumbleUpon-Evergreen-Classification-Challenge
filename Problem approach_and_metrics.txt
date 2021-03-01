@@ -1,0 +1,38 @@
+# The problem was to classify URL between "Evergreen" or "Non- Evergreen". 
+
+# The data is in the form of .tsv files.
+
+
+# Approach used:
+
+# Pre-processing: firstly checked the correlation between labels and features, and extracting 
+the feautures which affect the dependent variable (labels).
+
+# It was found that other then features("boilerplate" and "alchemy_category") no other feature is 
+affecting the dependency for the label.
+
+# All the other features were dropped down.
+
+# As feature: "alchemy_category" does conatins a lot of missing values, so it was also dropped.
+
+# boilerplate is giving more information than url, so it is converted into word embedding.
+
+# feature "boilerplate" is cleaned up so that it can be easily fed into model for classification.
+
+# Using Transformer architecture (BERT) from Hugging face library and TensorFlow 2.0 . Combining this two will build a powerful state of the art model for the classification task.
+
+
+#Final Metrics:(after 20 epochs)
+
+  loss: 0.3275 - auc: 0.9347 
+
+  val_loss: 0.2696 - val_auc: 0.9562
+
+   precision    recall  f1-score   support
+
+         0.0       0.50      0.49      0.49      3599
+         1.0       0.52      0.53      0.53      3796
+
+    accuracy                           0.51      7395
+   macro avg       0.51      0.51      0.51      7395
+weighted avg       0.51      0.51      0.51      7395
