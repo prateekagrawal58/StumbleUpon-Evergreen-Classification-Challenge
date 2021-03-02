@@ -15,7 +15,7 @@ affecting the dependency for the label.
 
 # As feature: "alchemy_category" does conatins a lot of missing values, so it was also dropped.
 
-# boilerplate is giving more information than url, so it is converted into BERT embedding.
+# boilerplate is giving more information than url, so it is converted into word embeddings.
 
 # feature "boilerplate" is cleaned up so that it can be easily fed into model for classification.
 
